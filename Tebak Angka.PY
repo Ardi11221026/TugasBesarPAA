@@ -43,7 +43,7 @@ class MainMenu(tk.Tk):
         self.instructions.place(relx=0.5, rely=0.15, anchor='center')
 
         # Tombol Menu Main
-        self.main_menu_button = tk.Button(self, text='Main Tebak Angka', command=self.start_game, font=('Arial', 14))
+        self.main_menu_button = tk.Button(self, text='Main', command=self.start_game, font=('Arial', 14))
         self.main_menu_button.place(relx=0.5, rely=0.4, anchor='center')
 
         # Tombol Keluar
