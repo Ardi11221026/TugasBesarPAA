@@ -74,7 +74,7 @@ class GuessingGame(tk.Tk):
         self.geometry(f'+{x_coordinate}+{y_coordinate}')
 
         # Label Tebak angka antara 1 dan 100
-        self.instructions = tk.Label(self, text='Tebak angka antara 1 dan 100:', font=('Times New Roman', 14))
+        self.instructions = tk.Label(self, text='Tebak angka antara 1 sampai 100:', font=('Times New Roman', 14))
         self.instructions.place(relx=0.5, rely=0.2, anchor='center')
 
         # Field input tebakan
@@ -118,7 +118,7 @@ class GuessingGame(tk.Tk):
             if self.binary_search.current_guess_attempts == 1:
                 messagebox.showinfo('Info', f'SELAMAT!!!\nAnda berhasil menebak angkanya.\n' f'Poin Anda: {points}')
             else:
-                messagebox.showinfo('Info', f'SELAMAT!!!\nAnda berhasil menebak angkanya dalam {self.binary_search.current_guess_attempts} percobaan.\n' f'Poin Anda: {points}')
+                messagebox.showinfo('Info', f'SELAMAT!!!\nAnda berhasil menebak angkanya dalam {self.binary_search.current_guess_attempts} kali percobaan.\n' f'Poin Anda: {points}')
             self.guess_button.config(state=tk.DISABLED)
             self.retry_button.config(state=tk.NORMAL)
         elif result == "too low":
