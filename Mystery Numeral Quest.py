@@ -26,7 +26,7 @@ class MainMenu(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title('Mystery Numeral Quest')
-        self.geometry('300x200')
+        self.geometry('300x300')
         self.initUI()
 
     def initUI(self):
@@ -48,7 +48,7 @@ class MainMenu(tk.Tk):
 
         # Tombol Keluar
         self.exit_button = tk.Button(self, text='Keluar', command=self.quit, font=('Arial', 14))
-        self.exit_button.place(relx=0.5, rely=0.65, anchor='center')
+        self.exit_button.place(relx=0.5, rely=0.55, anchor='center')
 
     def start_game(self):
         self.destroy()  # Tutup menu utama
