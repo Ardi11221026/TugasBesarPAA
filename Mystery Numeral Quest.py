@@ -14,13 +14,16 @@ class BinarySearch:
         if value == self.current_guess:
             return "correct"
         elif value < self.current_guess:
-            self.upper_bound = self.current_guess - 1
-            self.current_guess = (self.lower_bound + self.upper_bound) // 2
+            self.lower_bound = value + 1
             return "too low"
         else:
-            self.lower_bound = self.current_guess + 1
-            self.current_guess = (self.lower_bound + self.upper_bound) // 2
+            self.upper_bound = value - 1
             return "too high"
+
+    def next_guess(self):
+        if self.lower_bound <= self.upper_bound:
+            self.current_guess = (self.lower_bound + self.upper_bound) // 2
+        return self.current_guess
 
 class MainMenu(tk.Tk):
     def __init__(self):
